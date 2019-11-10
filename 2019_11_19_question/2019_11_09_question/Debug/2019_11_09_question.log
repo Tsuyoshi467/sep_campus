@@ -1,0 +1,2 @@
+﻿2019_11_question2.obj : error LNK2005: _main は既に 2019_11_09_question.obj で定義されています。
+C:\Users\human\Documents\Visual Studio 2019\2019_11_09_question\Debug\2019_11_09_question.exe : fatal error LNK1169: 1 つ以上の複数回定義されているシンボルが見つかりました。
