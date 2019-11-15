@@ -63,8 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\BlockController.cs" />
-    <Compile Include="Assets\Script\CheckManager.cs" />
-    <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\InputManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/human/Documents/UnityProject/2019_10_26/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

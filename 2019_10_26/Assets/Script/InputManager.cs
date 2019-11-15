@@ -32,7 +32,7 @@ public class InputManager : MonoBehaviour
     }
     public bool DownMove()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             return true;
         }
