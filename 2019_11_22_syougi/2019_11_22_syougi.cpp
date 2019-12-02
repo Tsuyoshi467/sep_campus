@@ -103,19 +103,23 @@ int counter = 0;//ターン
 int playerTurn = Player1;//ターン情報
 
 int holding[PlayerCount][8] = { 0 };//持ち駒
-
+int KingPotionY  =  8;
+int KingPotionX  =  4;
+int KingPotion2Y =  0;
+int KingPotion2X =  4;
+bool outeCheck = false;
 int main()
 {
 	//駒情報
-	int board[HEIGHTMAX][WIDTHMAX] = { {香2,桂2,銀2,金2,王2,金2,銀2,桂2, 香2},
-									   {空,飛2,空,空,空,空,空,角2,空},
+	int board[HEIGHTMAX][WIDTHMAX] = { {香2,桂2,銀2,金2,王2,金2,銀2,桂2,香2},
+									   {空 ,飛2,空 ,空 ,空 ,空 ,空 ,角2,空},
 									   {歩2,歩2,歩2,歩2,歩2,歩2,歩2,歩2,歩2},
-									   {空,空,空,空,空,空,空,空,空},
-									   {空,空,空,空,空,空,空,空,空},
-									   {空,空,空,空,空,空,空,空,空},
-									   {歩,歩,歩,歩,歩,歩,歩,歩,歩},
-									   {空,角,空,空,空,空,空,飛,空},
-									   {香,桂,銀,金,王,金,銀,桂,香}
+									   {空 ,空 ,空 ,空 ,空 ,空 ,空 ,空 ,空},
+									   {空 ,空 ,空 ,空 ,空 ,空 ,空 ,空 ,空},
+									   {空 ,空 ,空 ,空 ,空 ,空 ,空 ,空 ,空},
+									   {歩 ,歩 ,歩 ,歩 ,歩 ,歩 ,歩 ,歩 ,歩},
+									   {空 ,角 ,空 ,空 ,空 ,空 ,空 ,飛 ,空},
+									   {香 ,桂 ,銀 ,金 ,王 ,金 ,銀 ,桂 ,香}
 	};
 
 	//晩
@@ -148,6 +152,7 @@ void Input(int board[HEIGHTMAX][WIDTHMAX], Kifu* kifu) {
 	bool movePiece = false; //移動判定用
 	bool inputCheck = false;//入力判定用
 	bool nifuCheck = false;
+	outeCheck = false;
 
 	if (counter >= UNDOTURNMIN) {
 		printf("一手戻しますか? 0:No 1:Yes>");
@@ -271,17 +276,19 @@ void Input(int board[HEIGHTMAX][WIDTHMAX], Kifu* kifu) {
 				case 桂成:
 				case 香成:
 				case 歩成:
-					//下移動(左下)(右下)(下)
-					if ((nextY - nowY == 1 && nextX - nowX == -1) || (nextY - nowY == 1 && nextX - nowX == 1) || (nextY - nowY == 1 && nextX - nowX == 0)) {
+					//下移動
+					if (nextX == nowX && nextY - nowY == -1) {
 						inputCheck = true;
 					}
-					//上移動
+					//上移動(左上)(右上)(上)
 					else if (nextY - nowY == -1 && (nextX - nowX == -1 || nextX - nowX == 1 || nextX - nowX == 0)) {
 						inputCheck = true;
+					
 					}
 					//横移動
 					else if (nextY - nowY == 0 && (nextX - nowX == -1 || nextX - nowX == 1)) {
 						inputCheck = true;
+						
 					}
 					break;
 				case 金2:
@@ -289,17 +296,20 @@ void Input(int board[HEIGHTMAX][WIDTHMAX], Kifu* kifu) {
 				case 桂成2:
 				case 香成2:
 				case 歩成2:
-					//下移動(左下)(右下)(下)
-					if ((nextY - nowY == -1 && nextX - nowX == -1) || (nextY - nowY == -1 && nextX - nowX == 1) || (nextY - nowY == -1 && nextX - nowX == 0)) {
+					//下移動
+					if (nextX == nowX && nextY - nowY == 1) {
 						inputCheck = true;
+						
 					}
-					//上移動
+					//上移動(左上)(右上)(上)
 					else if (nextY - nowY == 1 && (nextX - nowX == -1 || nextX - nowX == 1 || nextX - nowX == 0)) {
 						inputCheck = true;
+						
 					}
 					//横移動
 					else if (nextY - nowY == 0 && (nextX - nowX == -1 || nextX - nowX == 1)) {
-						inputCheck = true;
+						inputCheck = true; 
+						
 					}
 					break;
 				case 銀:
@@ -318,7 +328,7 @@ void Input(int board[HEIGHTMAX][WIDTHMAX], Kifu* kifu) {
 				case 飛成2:
 					//移動先までの間に駒がないか
 					//Y判定
-					for (int i = pieceSearchStartY; i < pieceSearchGoalY-1; i++)
+					for (int i = pieceSearchStartY; i < pieceSearchGoalY; i++)
 					{
 						if (board[i][nowX] != 空) {
 							movePiece = false;
@@ -344,7 +354,15 @@ void Input(int board[HEIGHTMAX][WIDTHMAX], Kifu* kifu) {
 					}
 
 					//右1マス判定
+					if (nextY - nowY == 0 && nextX - nowX == -1) {
+						movePiece = true;
+					}
+					//左1マス判定
 					if (nextY - nowY == 0 && nextX - nowX == 1) {
+						movePiece = true;
+					}
+					//上1マス判定
+					if (nextY - nowY == -1 && nextX - nowX == 0) {
 						movePiece = true;
 					}
 					//下1マス判定
@@ -358,9 +376,6 @@ void Input(int board[HEIGHTMAX][WIDTHMAX], Kifu* kifu) {
 						if (nextY - nowY == -1 || nextY - nowY == 1) {
 							movePiece = true;
 						}
-						if (nextX - nowX == -1 || nextX - nowX == 1) {
-							movePiece = true;
-						}
 					}
 
 					//移動可能判定
@@ -372,6 +387,9 @@ void Input(int board[HEIGHTMAX][WIDTHMAX], Kifu* kifu) {
 				case 角2:
 				case 角成:
 				case 角成2:
+					if (nextY - nowY == -1 || nextY - nowY == 1) {
+						movePiece = true;
+					}
 					//移動先までの間に駒がないか
 					if (pieceSearchStartY == pieceSearchStartX)
 					{
@@ -504,7 +522,10 @@ void Input(int board[HEIGHTMAX][WIDTHMAX], Kifu* kifu) {
 					break;
 				case 歩2:
 					if (nextX == nowX && nextY - nowY == 1) {
-						inputCheck = true;
+						inputCheck = true; 
+						if (KingPotionY - nextY == 1) {
+							outeCheck = true;
+						}
 					}
 
 					break;
@@ -763,6 +784,449 @@ void Input(int board[HEIGHTMAX][WIDTHMAX], Kifu* kifu) {
 	kifu[counter].nowY = nowY;
 	kifu[counter].nowX = nowX;
 
+	//王手チェック
+	switch (board[nextY][nextX])
+	{
+	case 王:
+		KingPotionY = nextY;
+		KingPotionX = nextX;
+		break;
+	case 王2:
+		KingPotion2Y = nextY;
+		KingPotion2X = nextX;
+		break;
+	case 金:
+	case 銀成:
+	case 桂成:
+	case 香成:
+	case 歩成:
+		if (KingPotion2Y - nextY == -1) {
+			outeCheck = true;
+		}
+		else if (KingPotion2Y - nextY == -1 && (KingPotion2X - nextX == -1 || KingPotion2X - nextX == 1 || KingPotion2X - nextX == 0)) {
+			outeCheck = true;
+		}
+		else if (KingPotion2Y - nextY == 0 && (KingPotion2X - nextX == -1 || KingPotion2X - nextX == 1))
+		{
+			outeCheck = true;
+		}
+		break;
+	case 金2:
+	case 銀成2:
+	case 桂成2:
+	case 香成2:
+	case 歩成2:
+		if (KingPotionY - nextY == 1) {
+			outeCheck = true;
+		}
+		else if (KingPotionY - nextY == 1 && (KingPotionX - nextX == -1 || KingPotionX - nextX == 1 || KingPotionX - nextX == 0)) {
+			outeCheck = true;
+		}
+		else if (KingPotionY - nextY == 0 && (KingPotionX - nextX == -1 || KingPotionX - nextX == 1))
+		{
+			outeCheck = true;
+		}
+		break;
+	case 銀:
+		if (((KingPotion2Y - nextY == 1 || KingPotion2Y - nextY == -1) && (KingPotion2X - nextX == 1 || KingPotion2X - nextX == -1)) || (KingPotion2Y - nextY == -1 && KingPotion2X - nextX == 0)) {
+			outeCheck = true;
+		}
+		break;
+	case 銀2:
+		if (((KingPotionY - nextY == 1 || KingPotionY - nextY == -1) && (KingPotionX - nextX == 1 || KingPotionX - nextX == -1)) || (KingPotionY - nextY == 1 && KingPotionX - nextX == 0)) {
+			outeCheck = true;
+		}
+		break;
+	case 飛:
+	case 飛成:
+			if (KingPotion2X == nextX && KingPotion2Y - nextY == -1) {
+				outeCheck = true;
+				break;
+			}
+			if (KingPotion2X == nextX && KingPotion2Y - nextY == 1)
+			{
+				outeCheck = true; 
+				break;
+			}
+			if (KingPotion2X - nextX == -1 && KingPotion2Y == nextY) 
+			{
+				outeCheck = true;
+				break;
+			}
+			if (KingPotion2X - nextX == -1 && KingPotion2Y == nextY)
+			{
+				outeCheck = true;
+				break;
+			}
+			if (KingPotion2X == nextX &&KingPotion2Y < nextY)
+			{
+				for (int i = KingPotion2Y + 1; i < nextY; i++)
+				{
+					if (board[i][nextX] == 空)
+					{
+						outeCheck = true;
+					}
+					else
+					{
+						outeCheck = false;
+						break;
+					}
+				}
+			}
+			else if (KingPotion2X == nextX && KingPotion2Y > nextY)
+			{
+				for (int i = nextY + 1; i < KingPotion2Y; i++)
+				{
+					if (board[i][nextX] == 空) {
+						outeCheck = true;
+					}
+					else
+					{
+						outeCheck = false;
+						break;
+					}
+				}
+			}
+
+			if (KingPotion2Y == nextY &&KingPotion2X < nextX)
+			{
+				for (int i = KingPotion2X + 1; i < nextX; i++)
+				{
+					if (board[nextY][i] == 空)
+					{
+						outeCheck = true;
+					}
+					else
+					{
+						outeCheck = false;
+						break;
+					}
+				}
+			}
+			else if (KingPotion2Y == nextY && KingPotion2X > nextX)
+			{
+				for (int i = nextX + 1; i < KingPotion2X; i++)
+				{
+					if (board[nextY][i] == 空) {
+						outeCheck = true;
+					}
+					else
+					{
+						outeCheck = false;
+						break;
+					}
+				}
+			}
+			if (board[nextY][nextX] == 飛成) 
+			{
+				if (KingPotion2Y - nextY == -1 || KingPotion2Y - nextY == 1) {
+					outeCheck = true;
+				}
+			}
+		
+		break;
+	case 飛2:
+	case 飛成2:
+		if (KingPotionX == nextX && KingPotionY - nextY == -1) {
+			outeCheck = true;
+			break;
+		}
+		if (KingPotionX == nextX && KingPotionY - nextY == 1) {
+			outeCheck = true;
+			break;
+		}
+		if (KingPotionX - nextX == -1 && KingPotionY == nextY) {
+			outeCheck = true;
+			break;
+		}
+		if (KingPotionX - nextX == -1 && KingPotionY == nextY) {
+			outeCheck = true;
+			break;
+		}
+		if (KingPotionY < nextY)
+		{
+			for (int i = KingPotionY + 1; i < nextY; i++)
+			{
+				if (board[i][nextX] == 空)
+				{
+					outeCheck = true;
+				}
+				else
+				{
+					outeCheck = false;
+					break;
+				}
+			}
+		}
+		else
+		{
+			for (int i = nextY + 1; i < KingPotionY; i++)
+			{
+				if (board[i][nextX] == 空) {
+					outeCheck = true;
+				}
+				else
+				{
+					outeCheck = false;
+					break;
+				}
+			}
+		}
+		if (KingPotionX < nextX)
+		{
+			for (int i = KingPotionX + 1; i < nextX; i++)
+			{
+				if (board[nextY][i] == 空)
+				{
+					outeCheck = true;
+				}
+				else
+				{
+					outeCheck = false;
+					break;
+				}
+			}
+		}
+		else
+		{
+			for (int i = nextX + 1; i < KingPotionX; i++)
+			{
+				if (board[nextY][i] == 空) {
+					outeCheck = true;
+				}
+				else
+				{
+					outeCheck = false;
+					break;
+				}
+			}
+		}
+		if (board[nextY][nextX] == 飛成2)
+		{
+			if (KingPotionY - nextY == -1 || KingPotionY - nextY == 1) {
+				outeCheck = true;
+			}
+		}
+		break;
+	case 角:
+	case 角成:
+
+		if (nextY < KingPotion2Y && nextX < KingPotion2X) {
+			for (int i = nextY + 1; i <= KingPotion2Y; i++)
+			{
+				if (board[i][nowX + 1] != 空 && board[i][nowX + 1] != 王2) {
+					outeCheck = false;
+					break;
+				}
+				else if (board[i][nowX + 1] == 王2)
+				{
+					outeCheck = true;
+				}
+				++nowX;
+			}
+		}
+		else if (nextY < KingPotion2Y && nextX > KingPotion2X) {
+			for (int i = nextY + 1; i <= KingPotion2Y; i++)
+			{
+				if (board[i][nextX - 1] != 空 && board[i][nextX - 1] != 王2) {
+					outeCheck = false;
+					break;
+				}
+				else if (board[i][nextX - 1] == 王2)
+				{
+					outeCheck = true;
+				}
+				--nextX;
+			}
+		}
+		else if (nextY > KingPotion2Y && nextX < KingPotion2X) {
+			for (int i = nextX + 1; i <= KingPotion2X; i++)
+			{
+				if (board[nextY - 1][i] != 空 && board[nextY - 1][i] != 王2) {
+					outeCheck = false;
+					break;
+				}
+				else if (board[nextY - 1][i] == 王2)
+				{
+					outeCheck = true;
+				}
+				--nextY;
+			}
+		}
+		else if (nextY > KingPotion2Y && nextX > KingPotion2X) {
+			for (int i = nextY - 1; i >= KingPotion2Y; i--)
+			{
+				if (board[i][nextX - 1] != 空 && board[i][nextX - 1] != 王2) {
+					outeCheck = false;
+					break;
+				}
+				else if (board[i][nextX - 1] == 王2)
+				{
+					outeCheck = true;
+				}
+				--nextX;
+			}
+		}
+		//成っているときだけ
+		if (board[nextY][nextX] == 角成)
+		{
+			if (KingPotion2X == nextX && KingPotion2Y - nextY == -1) {
+				outeCheck = true;
+				break;
+			}
+			if (KingPotion2X == nextX && KingPotion2Y - nextY == 1)
+			{
+				outeCheck = true;
+				break;
+			}
+			if (KingPotion2X - nextX == -1 && KingPotion2Y == nextY)
+			{
+				outeCheck = true;
+				break;
+			}
+			if (KingPotion2X - nextX == -1 && KingPotion2Y == nextY)
+			{
+				outeCheck = true;
+				break;
+			}
+		}
+		break;
+	case 角2:
+	case 角成2:
+
+		if (nextY < KingPotionY && nextX < KingPotionX) {
+			for (int i = nextY + 1; i <= KingPotionY; i++)
+			{
+				if (board[i][nowX + 1] != 空 && board[i][nowX + 1] != 王) {
+					outeCheck = false;
+					break;
+				}
+				else if (board[i][nowX + 1] == 王)
+				{
+					outeCheck = true;
+				}
+				++nowX;
+			}
+		}
+		else if (nextY < KingPotionY && nextX > KingPotionX) {
+			for (int i = nextY + 1; i <= KingPotionY; i++)
+			{
+				if (board[i][nextX - 1] != 空 && board[i][nextX - 1] != 王) {
+					outeCheck = false;
+					break;
+				}
+				else if (board[i][nextX - 1] == 王)
+				{
+					outeCheck = true;
+				}
+				--nextX;
+			}
+		}
+		else if (nextY > KingPotionY&& nextX < KingPotionX) {
+			for (int i = nextX + 1; i <= KingPotionX; i++)
+			{
+				if (board[nextY - 1][i] != 空 && board[nextY - 1][i] != 王) {
+					outeCheck = false;
+					break;
+				}
+				else if (board[nextY - 1][i] == 王)
+				{
+					outeCheck = true;
+				}
+				--nextY;
+			}
+		}
+		else if (nextY > KingPotionY&& nextX > KingPotionX) {
+			for (int i = nextY - 1; i >= KingPotionY; i--)
+			{
+				if (board[i][nextX - 1] != 空 && board[i][nextX - 1] != 王) {
+					outeCheck = false;
+					break;
+				}
+				else if (board[i][nextX - 1] == 王)
+				{
+					outeCheck = true;
+				}
+				--nextX;
+			}
+		}
+		//成っているときだけ
+		if (board[nextY][nextX] == 角成2)
+		{
+			if (KingPotionX == nextX && KingPotionY - nextY == -1) {
+				outeCheck = true;
+				break;
+			}
+			if (KingPotionX == nextX && KingPotionY - nextY == 1)
+			{
+				outeCheck = true;
+				break;
+			}
+			if (KingPotionX - nextX == -1 && KingPotionY == nextY)
+			{
+				outeCheck = true;
+				break;
+			}
+			if (KingPotionX - nextX == -1 && KingPotionY == nextY)
+			{
+				outeCheck = true;
+				break;
+			}
+		}
+		break;
+	case 桂:
+		if ((KingPotion2X - nextX == 1 || KingPotion2X - nextX == -1) && (KingPotion2Y - nextY == -2)) {
+			outeCheck = true;
+		}
+		break;
+	case 桂2:
+		if ((KingPotionX - nextX == 1 || KingPotionX - nextX == -1) && (KingPotionY - nextY == 2)) {
+			outeCheck = true;
+		}
+		break;
+	case 香:
+		if (KingPotion2X == nextX && KingPotion2Y - nextY == -1) {
+			outeCheck = true;
+		}
+		for (int i = KingPotion2Y + 1; i < nextY; i++)
+		{
+			if (board[i][nextX] == 空) {
+				outeCheck = true;
+			}
+			else
+			{
+				outeCheck = false;				
+				break;
+			}
+		}
+		break;
+	case 香2:
+		if (KingPotionX == nextX && KingPotionY - nextY == 1) {
+			outeCheck = true;
+		}
+		for (int i = nextY + 1; i < KingPotionY; i++)
+		{
+			if (board[i][nextX] == 空) {
+				outeCheck = true;
+			}
+			else
+			{
+				outeCheck = false;
+				break;
+			}
+		}
+		break;
+	case 歩:
+		if (KingPotion2X == nextX && KingPotion2Y - nextY == -1) {
+			outeCheck = true;
+		}
+		break;
+	case 歩2:
+		if (KingPotionX == nextX && KingPotionY - nextY == 1) {
+			outeCheck = true;
+		}
+		break;
+	}
 	//ターン変更
 	if (playerTurn == Player1) {
 		playerTurn = Player2;
@@ -1129,6 +1593,11 @@ void Draw(int board[HEIGHTMAX][WIDTHMAX], Kifu* kifu)
 		printf("%s %s %d %s\n", turn.c_str(), kanji.c_str(), kifu[counter].nextY + 1, koma.c_str());
 	}
 
+	printf("\n");
+	if (outeCheck == true) 
+	{
+		printf("王手です!");
+	}
 	printf("\n");
 	if (playerTurn == Player1) {
 		printf("先手の番です");
