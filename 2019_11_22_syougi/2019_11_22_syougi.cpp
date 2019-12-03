@@ -122,12 +122,12 @@ int main()
 									   {香 ,桂 ,銀 ,金 ,王 ,金 ,銀 ,桂 ,香}
 	};
 
-	//盤
+	//晩
 	Kifu kifu[200] = { 0 };
 
 	while (TURNMAX)
 	{
-		system("cls");     //画面更新
+		//system("cls");     //画面更新
 		Draw(board, kifu); //表示
 		Input(board, kifu);//移動
 	}
@@ -171,7 +171,7 @@ void Input(int board[HEIGHTMAX][WIDTHMAX], Kifu* kifu) {
 		while (true)
 		{
 			printf("どれを動かしますか？\n");
-			printf("行を選んでください 盤:1～9 持ち駒:10>");
+			printf("列を選んでください 盤:1～9 持ち駒:10>");
 			cin >> nowX;
 
 			nowX--;
@@ -182,7 +182,7 @@ void Input(int board[HEIGHTMAX][WIDTHMAX], Kifu* kifu) {
 			}
 			else
 			{
-				printf("列を選んでください 1～9>");
+				printf("行を選んでください 1～9>");
 			}
 			cin >> tempIn;
 			nowY = tempIn - '0';
@@ -216,10 +216,10 @@ void Input(int board[HEIGHTMAX][WIDTHMAX], Kifu* kifu) {
 
 		//移動先判定
 		printf("どこに動かしますか？\n");
-		printf("行を選んでください 1～9>");
+		printf("列を選んでください 1～9>");
 		cin >> nextX;
 		nextX--;
-		printf("列を選んでください 1～9>");
+		printf("行を選んでください 1～9>");
 		cin >> nextY;
 		nextY--;
 		printf("\n");
