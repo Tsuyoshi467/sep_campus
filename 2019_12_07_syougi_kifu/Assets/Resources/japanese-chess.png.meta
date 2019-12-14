@@ -1,0 +1,1120 @@
+fileFormatVersion: 2
+guid: 1774ab9cc92414d40b4a49a468df2b45
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6344808168516332853
+    second: japanese-chess_0
+  - first:
+      213: -9177626294841792278
+    second: japanese-chess_1
+  - first:
+      213: 3699783803576805646
+    second: japanese-chess_2
+  - first:
+      213: 4904098701357289048
+    second: japanese-chess_3
+  - first:
+      213: -203334637798997637
+    second: japanese-chess_4
+  - first:
+      213: 2901025813841699647
+    second: japanese-chess_5
+  - first:
+      213: 2506499849139907545
+    second: japanese-chess_6
+  - first:
+      213: 5773305617064130220
+    second: japanese-chess_7
+  - first:
+      213: 8966993780446509875
+    second: japanese-chess_8
+  - first:
+      213: 2341499140660863920
+    second: japanese-chess_9
+  - first:
+      213: -1785549853489970279
+    second: japanese-chess_10
+  - first:
+      213: -8949781339023283628
+    second: japanese-chess_11
+  - first:
+      213: -8077574166386186609
+    second: japanese-chess_12
+  - first:
+      213: -5068145149453504040
+    second: japanese-chess_13
+  - first:
+      213: -3767628133100257643
+    second: japanese-chess_14
+  - first:
+      213: -858740492944564541
+    second: japanese-chess_15
+  - first:
+      213: 3942162160452827375
+    second: japanese-chess_16
+  - first:
+      213: -2277059777770053227
+    second: japanese-chess_17
+  - first:
+      213: 4057912970802072231
+    second: japanese-chess_18
+  - first:
+      213: -4048248253863675741
+    second: japanese-chess_19
+  - first:
+      213: 858972984582938148
+    second: japanese-chess_20
+  - first:
+      213: -1256971332395433002
+    second: japanese-chess_21
+  - first:
+      213: -1734782867149157914
+    second: japanese-chess_22
+  - first:
+      213: 8968019567162428956
+    second: japanese-chess_23
+  - first:
+      213: 7986153793433967520
+    second: japanese-chess_24
+  - first:
+      213: 3499045653236928267
+    second: japanese-chess_25
+  - first:
+      213: -8554621908812334376
+    second: japanese-chess_26
+  - first:
+      213: 8999924857015191541
+    second: japanese-chess_27
+  - first:
+      213: 5934434946777119797
+    second: japanese-chess_28
+  - first:
+      213: 700834850329462434
+    second: japanese-chess_29
+  - first:
+      213: -7620460532008883016
+    second: japanese-chess_30
+  - first:
+      213: 1012830841821169320
+    second: japanese-chess_31
+  - first:
+      213: 2190080676097685215
+    second: japanese-chess_32
+  - first:
+      213: 5088491152581698941
+    second: japanese-chess_33
+  - first:
+      213: -1367328179222826054
+    second: japanese-chess_34
+  - first:
+      213: -6901423710162953414
+    second: japanese-chess_35
+  - first:
+      213: -2681104228510901472
+    second: japanese-chess_36
+  - first:
+      213: 2485244278333602166
+    second: japanese-chess_37
+  - first:
+      213: 2261563449503490951
+    second: japanese-chess_38
+  - first:
+      213: -6308935516635589270
+    second: japanese-chess_39
+  - first:
+      213: -3784399603715140026
+    second: japanese-chess_40
+  - first:
+      213: 6158610561778286617
+    second: japanese-chess_41
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: japanese-chess_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 268
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9dc10da7e277f45b53c85541135a5f
+      internalID: 6344808168516332853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 269
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3583482c6ecf76846aab09eacf86784e
+      internalID: -9177626294841792278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_2
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 269
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e643e0d2499bd4da19e8dd0fcbe62d
+      internalID: 3699783803576805646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_3
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 269
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c5ec2e0d9c73c40b3bcdfb1f0c81bb
+      internalID: 4904098701357289048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_4
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 269
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c4150995c8f4349910d333e4bb151f
+      internalID: -203334637798997637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 269
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e923874289d13454e8db2d14ed2bd475
+      internalID: 2901025813841699647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_6
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 270
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874f5247ea913d64b93aa0ee695c1aab
+      internalID: 2506499849139907545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_7
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 271
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fe9ccb93124b34a96c606ad9458a34
+      internalID: 5773305617064130220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 215
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29b78ea40d9b9d4f8e2215ec3ac5090
+      internalID: 8966993780446509875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_9
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 217
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948d558064b63d34a88efdf1ea6045d4
+      internalID: 2341499140660863920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_10
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 163
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7284614fd1891e45aa8fceeb4e0435e
+      internalID: -1785549853489970279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_11
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 215
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd47bd973e51a5b4bab6a1670bcfd7c2
+      internalID: -8949781339023283628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 215
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2653b6465f4d8ad4c9e437eab25c1352
+      internalID: -8077574166386186609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_13
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 216
+        width: 39
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a89e2239e25b4b4ca56bf75a2bbac43
+      internalID: -5068145149453504040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_14
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 216
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299b5381be3be134892fb6fba2cedb19
+      internalID: -3767628133100257643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_15
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 163
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0931dd6796b6706469a6aa196967873f
+      internalID: -858740492944564541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_16
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 162
+        width: 44
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68ba46f45b143f49b4522499de6cfcf
+      internalID: 3942162160452827375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_17
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 162
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa7b1e9c0ec4f54f9bf3940bdf7e27c
+      internalID: -2277059777770053227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_18
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 162
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b55f2b65f1e8c44b78cd0b34ed0ebe
+      internalID: 4057912970802072231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_19
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 164
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc219c1280dde04fa6a5168899d30ee
+      internalID: -4048248253863675741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_20
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 109
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a094267dfd145df49924653ef68dafb2
+      internalID: 858972984582938148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_21
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 109
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b1f8b6ebe4d75429b1cfd41741e718
+      internalID: -1256971332395433002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_22
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 109
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7e1a0c0b3a41447a7ce0f065dab220
+      internalID: -1734782867149157914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_23
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 109
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d6822ae96b25743b786820b46c774f
+      internalID: 8968019567162428956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_24
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 110
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b692cdbf0e8dd4ba2d343c40694c81
+      internalID: 7986153793433967520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 109
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fea1a824b0eeb14bb4af1adec659bc1
+      internalID: 3499045653236928267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_26
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 111
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ec5f90534c8794c942df4547cb2d27
+      internalID: -8554621908812334376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_27
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 111
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1e2f79e0783684fb87589784f71bc4
+      internalID: 8999924857015191541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_28
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 55
+        width: 44
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac903d017c1b98a439f09ee1592a0d4b
+      internalID: 5934434946777119797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_29
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 56
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bc80845a6e54343965743dd17280af
+      internalID: 700834850329462434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_30
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 56
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8773bb40fbbaaa34589149652b7c2d9b
+      internalID: -7620460532008883016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_31
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 56
+        width: 43
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d5e8c303cfc874e8e846dc973dc8bc
+      internalID: 1012830841821169320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 56
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58389759d82e97844ba927ef93de912c
+      internalID: 2190080676097685215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_33
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 57
+        width: 38
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32bc6d89832ff94abde3016da316634
+      internalID: 5088491152581698941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_34
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 58
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55777bdcb710804eb4076c33ff78d02
+      internalID: -1367328179222826054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_35
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 3
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a32a26cd559c54b9922d6a1b29844a
+      internalID: -6901423710162953414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_36
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 3
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be1027a4d1061b41906aa4d2df2510f
+      internalID: -2681104228510901472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_37
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a650df404c8d3a47a6d10c58e16be2a
+      internalID: 2485244278333602166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df08dbc416a043d47926b61d8c559567
+      internalID: 2261563449503490951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_39
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 3
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cbf458e0a7ab594d83f7c6a7e6ce172
+      internalID: -6308935516635589270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_40
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 3
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f2a2896772d038499cdd9f1534f4e06
+      internalID: -3784399603715140026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japanese-chess_41
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 217
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8f8f3364ec5d744bb14ad387c08c7e
+      internalID: 6158610561778286617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 89729bba727f3ea458719e7218ef5c28
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
