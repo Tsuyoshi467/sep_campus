@@ -9,9 +9,17 @@ public class KifuManager : MonoBehaviour
 
     [SerializeField]
     TextAsset textAsset;  //読み込むテキスト
+    
+    [SerializeField]
+    SpriteRenderer []pieceSpriteRenderer;
+
+    [SerializeField]
+    Sprite [] pieceSpriteDate;
+
     string loadText;      //読み込んだ文字を一つにする  
     string[] splitText;   //1行
     string[] splitDate;   //カンマ区切り
+
 
     public enum Piece
     {
@@ -54,6 +62,25 @@ public class KifuManager : MonoBehaviour
         空,
 
     };
+
+    enum PieceSprite
+    {
+        Gin,
+        Hisya,
+        Kaku,
+        Keima,
+        Kyousya,
+        Fu,
+        GinNari,
+        HisyaNari,
+        KakuNari,
+        KeimaNari,
+        KyousyaNari,
+        FuNari,
+
+        PieceSpriteLength,
+    }
+
     //棋譜構造体
     struct Kifu
     {
@@ -93,6 +120,7 @@ public class KifuManager : MonoBehaviour
         dateNumber = splitDate.Length;       //文字の数取得
         kifu = new Kifu[kifuNumber];         //棋譜生成
         splitStete = new int[dateNumber];　　//総文字数の要素数の配列
+        pieceSpriteRenderer = new SpriteRenderer[pieceDate.Length];
         board = new int[height, width];      //計算用二次元配列
 
         for(int i = 0;i < dateNumber -1; i++)
@@ -132,6 +160,11 @@ public class KifuManager : MonoBehaviour
             pos = pieceDate[i].transform.position;
             board[Mathf.Abs((int)pos.y + boardY_start), (int)Mathf.Abs((int)pos.x + boardX_start)] = i;
         }
+        //boardに駒を配置
+        for(int i = 0; i < pieceDate.Length; i++)
+        {
+            pieceSpriteRenderer[i] = pieceDate[i].GetComponent<SpriteRenderer>();
+        }
     }
 
     // Update is called once per frame
@@ -154,6 +187,29 @@ public class KifuManager : MonoBehaviour
         //駒がとられたとき非表示にする
         if(board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX] != notPiece)
         {
+            switch (pieceDate[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].tag)
+            {
+                case "Gin":
+                    pieceSpriteRenderer[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].sprite = pieceSpriteDate[(int)PieceSprite.Gin];
+                    break;
+                case "Hisya":
+                    pieceSpriteRenderer[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].sprite = pieceSpriteDate[(int)PieceSprite.Hisya];
+                    break;
+                case "kaku":
+                    pieceSpriteRenderer[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].sprite = pieceSpriteDate[(int)PieceSprite.Kaku];
+                    break;
+                case "Keima":
+                    pieceSpriteRenderer[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].sprite = pieceSpriteDate[(int)PieceSprite.Keima];
+                    break;
+                case "Kyousya":
+                    pieceSpriteRenderer[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].sprite = pieceSpriteDate[(int)PieceSprite.Kyousya];
+                    break;
+                case "Fu":
+                    pieceSpriteRenderer[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].sprite = pieceSpriteDate[(int)PieceSprite.Fu];
+                    break;
+                default:
+                    break;
+            }
             pieceDate[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].SetActive(false);//駒を非表示にする
         }
         if (kifu[kifuCounter].nowY == notPiece || kifu[kifuCounter].nowX == notPiece)
@@ -195,8 +251,37 @@ public class KifuManager : MonoBehaviour
             }
 
         }
-        else if (kifu[kifuCounter].nowY != notPiece || kifu[kifuCounter].nowX != notPiece)
+        else if (kifu[kifuCounter].nowY != notPiece && kifu[kifuCounter].nowX != notPiece)
         {
+            switch (kifu[kifuCounter].piece)
+            {
+                case (int)Piece.銀成:
+                case (int)Piece.銀成2:
+                    pieceSpriteRenderer[board[kifu[kifuCounter].nowY, kifu[kifuCounter].nowX]].sprite = pieceSpriteDate[(int)PieceSprite.GinNari];
+                    break;
+                case (int)Piece.飛成:
+                case (int)Piece.飛成2:
+                    pieceSpriteRenderer[board[kifu[kifuCounter].nowY, kifu[kifuCounter].nowX]].sprite = pieceSpriteDate[(int)PieceSprite.HisyaNari];
+                    break;
+                case (int)Piece.角成:
+                case (int)Piece.角成2:
+                    pieceSpriteRenderer[board[kifu[kifuCounter].nowY, kifu[kifuCounter].nowX]].sprite = pieceSpriteDate[(int)PieceSprite.KakuNari];
+                    break;
+                case (int)Piece.桂成:
+                case (int)Piece.桂成2:
+                    pieceSpriteRenderer[board[kifu[kifuCounter].nowY, kifu[kifuCounter].nowX]].sprite = pieceSpriteDate[(int)PieceSprite.KeimaNari];
+                    break;
+                case (int)Piece.香成:
+                case (int)Piece.香成2:
+                    pieceSpriteRenderer[board[kifu[kifuCounter].nowY, kifu[kifuCounter].nowX]].sprite = pieceSpriteDate[(int)PieceSprite.KyousyaNari];
+                    break;
+                case (int)Piece.歩成:
+                case (int)Piece.歩成2:
+                    pieceSpriteRenderer[board[kifu[kifuCounter].nowY, kifu[kifuCounter].nowX]].sprite = pieceSpriteDate[(int)PieceSprite.FuNari];
+                    break;
+                default:
+                    break;
+            }
             //棋譜をもとに配列を更新
             board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX] = board[kifu[kifuCounter].nowY, kifu[kifuCounter].nowX];
             //移動元の中身を消す
@@ -218,11 +303,19 @@ public class KifuManager : MonoBehaviour
         {
             if (pieceDate[i].activeSelf == false && pieceDate[i].tag == pieceName)
             {
-                pieceDate[i].transform.Rotate(new Vector3(0, 0, 180));//駒の向きを変える
+                if(kifuCounter % 2 == 0)
+                {
+                    pieceDate[i].transform.rotation = Quaternion.Euler(0, 0,0);//駒の向きを変える
+                }
+                else
+                {
+                    pieceDate[i].transform.rotation = Quaternion.Euler(0, 0, 180f);//駒の向きを変える
+                }
                 pos = pieceDate[i].transform.position;                //消えている駒の座標取得
                 pos.y = (kifu[kifuCounter].nextY + boardY_start) * -1;//座標Y変更
                 pos.x = (kifu[kifuCounter].nextX + boardX_start) * -1;//座標X変更
                 pieceDate[i].transform.position = pos;                //駒の座標を変更
+                board[Mathf.Abs((int)pos.y + boardY_start), (int)Mathf.Abs((int)pos.x + boardX_start)] = i;
                 pieceDate[i].SetActive(true);                         //駒を表示
                 break;
             }

@@ -4,130 +4,130 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 6344808168516332853
-    second: japanese-chess_0
+    second: King
   - first:
       213: -9177626294841792278
-    second: japanese-chess_1
+    second: Hisya
   - first:
       213: 3699783803576805646
-    second: japanese-chess_2
+    second: Kaku
   - first:
       213: 4904098701357289048
-    second: japanese-chess_3
+    second: Kin
   - first:
       213: -203334637798997637
-    second: japanese-chess_4
+    second: Gin
   - first:
       213: 2901025813841699647
-    second: japanese-chess_5
+    second: Keima
   - first:
       213: 2506499849139907545
-    second: japanese-chess_6
+    second: Kyousya
   - first:
       213: 5773305617064130220
-    second: japanese-chess_7
+    second: Fu
   - first:
       213: 8966993780446509875
-    second: japanese-chess_8
+    second: Gyoku
   - first:
       213: 2341499140660863920
-    second: japanese-chess_9
+    second: HisyaNari
   - first:
       213: -1785549853489970279
-    second: japanese-chess_10
+    second: z2
   - first:
       213: -8949781339023283628
-    second: japanese-chess_11
+    second: GinNari
   - first:
       213: -8077574166386186609
-    second: japanese-chess_12
+    second: KeimaNari
   - first:
       213: -5068145149453504040
-    second: japanese-chess_13
+    second: KyousyaNari
   - first:
       213: -3767628133100257643
-    second: japanese-chess_14
+    second: FuNari
   - first:
       213: -858740492944564541
-    second: japanese-chess_15
+    second: z1
   - first:
       213: 3942162160452827375
-    second: japanese-chess_16
+    second: z3
   - first:
       213: -2277059777770053227
-    second: japanese-chess_17
+    second: z4
   - first:
       213: 4057912970802072231
-    second: japanese-chess_18
+    second: z5
   - first:
       213: -4048248253863675741
-    second: japanese-chess_19
+    second: z6
   - first:
       213: 858972984582938148
-    second: japanese-chess_20
+    second: z7
   - first:
       213: -1256971332395433002
-    second: japanese-chess_21
+    second: z8
   - first:
       213: -1734782867149157914
-    second: japanese-chess_22
+    second: z9
   - first:
       213: 8968019567162428956
-    second: japanese-chess_23
+    second: z10
   - first:
       213: 7986153793433967520
-    second: japanese-chess_24
+    second: z11
   - first:
       213: 3499045653236928267
-    second: japanese-chess_25
+    second: z12
   - first:
       213: -8554621908812334376
-    second: japanese-chess_26
+    second: z13
   - first:
       213: 8999924857015191541
-    second: japanese-chess_27
+    second: z14
   - first:
       213: 5934434946777119797
-    second: japanese-chess_28
+    second: z15
   - first:
       213: 700834850329462434
-    second: japanese-chess_29
+    second: z16
   - first:
       213: -7620460532008883016
-    second: japanese-chess_30
+    second: z17
   - first:
       213: 1012830841821169320
-    second: japanese-chess_31
+    second: z18
   - first:
       213: 2190080676097685215
-    second: japanese-chess_32
+    second: z19
   - first:
       213: 5088491152581698941
-    second: japanese-chess_33
+    second: z20
   - first:
       213: -1367328179222826054
-    second: japanese-chess_34
+    second: z21
   - first:
       213: -6901423710162953414
-    second: japanese-chess_35
+    second: z22
   - first:
       213: -2681104228510901472
-    second: japanese-chess_36
+    second: z23
   - first:
       213: 2485244278333602166
-    second: japanese-chess_37
+    second: z24
   - first:
       213: 2261563449503490951
-    second: japanese-chess_38
+    second: z25
   - first:
       213: -6308935516635589270
-    second: japanese-chess_39
+    second: z26
   - first:
       213: -3784399603715140026
-    second: japanese-chess_40
+    second: z27
   - first:
       213: 6158610561778286617
-    second: japanese-chess_41
+    second: KakuNari
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -221,7 +221,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: japanese-chess_0
+      name: King
       rect:
         serializedVersion: 2
         x: 2
@@ -229,7 +229,7 @@ TextureImporter:
         width: 46
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -242,7 +242,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_1
+      name: Hisya
       rect:
         serializedVersion: 2
         x: 53
@@ -250,7 +250,7 @@ TextureImporter:
         width: 45
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -263,7 +263,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_2
+      name: Kaku
       rect:
         serializedVersion: 2
         x: 103
@@ -271,7 +271,7 @@ TextureImporter:
         width: 45
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -284,15 +284,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_3
+      name: Kin
       rect:
         serializedVersion: 2
-        x: 154
+        x: 155
         y: 269
         width: 44
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -305,7 +305,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_4
+      name: Gin
       rect:
         serializedVersion: 2
         x: 204
@@ -313,7 +313,7 @@ TextureImporter:
         width: 44
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -326,7 +326,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_5
+      name: Keima
       rect:
         serializedVersion: 2
         x: 256
@@ -334,7 +334,7 @@ TextureImporter:
         width: 40
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -347,7 +347,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_6
+      name: Kyousya
       rect:
         serializedVersion: 2
         x: 306
@@ -355,7 +355,7 @@ TextureImporter:
         width: 39
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -368,7 +368,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_7
+      name: Fu
       rect:
         serializedVersion: 2
         x: 358
@@ -376,7 +376,7 @@ TextureImporter:
         width: 35
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -389,7 +389,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_8
+      name: Gyoku
       rect:
         serializedVersion: 2
         x: 2
@@ -397,7 +397,7 @@ TextureImporter:
         width: 45
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -410,7 +410,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_9
+      name: HisyaNari
       rect:
         serializedVersion: 2
         x: 53
@@ -418,7 +418,7 @@ TextureImporter:
         width: 45
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -431,7 +431,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_10
+      name: z2
       rect:
         serializedVersion: 2
         x: 103
@@ -439,7 +439,7 @@ TextureImporter:
         width: 45
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -452,7 +452,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_11
+      name: GinNari
       rect:
         serializedVersion: 2
         x: 204
@@ -460,7 +460,7 @@ TextureImporter:
         width: 43
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -473,7 +473,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_12
+      name: KeimaNari
       rect:
         serializedVersion: 2
         x: 256
@@ -481,7 +481,7 @@ TextureImporter:
         width: 40
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -494,7 +494,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_13
+      name: KyousyaNari
       rect:
         serializedVersion: 2
         x: 306
@@ -502,7 +502,7 @@ TextureImporter:
         width: 39
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -515,7 +515,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_14
+      name: FuNari
       rect:
         serializedVersion: 2
         x: 358
@@ -523,7 +523,7 @@ TextureImporter:
         width: 35
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -536,7 +536,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_15
+      name: z1
       rect:
         serializedVersion: 2
         x: 53
@@ -544,7 +544,7 @@ TextureImporter:
         width: 45
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -557,7 +557,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_16
+      name: z3
       rect:
         serializedVersion: 2
         x: 204
@@ -565,7 +565,7 @@ TextureImporter:
         width: 44
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -578,7 +578,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_17
+      name: z4
       rect:
         serializedVersion: 2
         x: 256
@@ -586,7 +586,7 @@ TextureImporter:
         width: 40
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -599,7 +599,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_18
+      name: z5
       rect:
         serializedVersion: 2
         x: 306
@@ -607,7 +607,7 @@ TextureImporter:
         width: 39
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -620,7 +620,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_19
+      name: z6
       rect:
         serializedVersion: 2
         x: 358
@@ -628,7 +628,7 @@ TextureImporter:
         width: 35
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -641,7 +641,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_20
+      name: z7
       rect:
         serializedVersion: 2
         x: 2
@@ -649,7 +649,7 @@ TextureImporter:
         width: 45
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -662,7 +662,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_21
+      name: z8
       rect:
         serializedVersion: 2
         x: 53
@@ -670,7 +670,7 @@ TextureImporter:
         width: 45
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -683,15 +683,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_22
+      name: z9
       rect:
         serializedVersion: 2
-        x: 103
+        x: 104
         y: 109
         width: 45
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -704,7 +704,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_23
+      name: z10
       rect:
         serializedVersion: 2
         x: 154
@@ -712,7 +712,7 @@ TextureImporter:
         width: 43
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -725,7 +725,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_24
+      name: z11
       rect:
         serializedVersion: 2
         x: 204
@@ -733,7 +733,7 @@ TextureImporter:
         width: 43
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -746,15 +746,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_25
+      name: z12
       rect:
         serializedVersion: 2
         x: 256
-        y: 109
+        y: 110
         width: 40
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -767,7 +767,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_26
+      name: z13
       rect:
         serializedVersion: 2
         x: 307
@@ -775,7 +775,7 @@ TextureImporter:
         width: 37
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -788,7 +788,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_27
+      name: z14
       rect:
         serializedVersion: 2
         x: 360
@@ -796,7 +796,7 @@ TextureImporter:
         width: 35
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -809,7 +809,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_28
+      name: z15
       rect:
         serializedVersion: 2
         x: 3
@@ -817,7 +817,7 @@ TextureImporter:
         width: 44
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -830,7 +830,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_29
+      name: z16
       rect:
         serializedVersion: 2
         x: 53
@@ -838,7 +838,7 @@ TextureImporter:
         width: 45
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -851,7 +851,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_30
+      name: z17
       rect:
         serializedVersion: 2
         x: 103
@@ -859,7 +859,7 @@ TextureImporter:
         width: 45
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -872,7 +872,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_31
+      name: z18
       rect:
         serializedVersion: 2
         x: 204
@@ -880,7 +880,7 @@ TextureImporter:
         width: 43
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -893,15 +893,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_32
+      name: z19
       rect:
         serializedVersion: 2
-        x: 256
+        x: 257
         y: 56
         width: 40
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -914,7 +914,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_33
+      name: z20
       rect:
         serializedVersion: 2
         x: 307
@@ -922,7 +922,7 @@ TextureImporter:
         width: 38
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -935,15 +935,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_34
+      name: z21
       rect:
         serializedVersion: 2
         x: 360
-        y: 58
+        y: 59
         width: 35
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -956,7 +956,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_35
+      name: z22
       rect:
         serializedVersion: 2
         x: 53
@@ -964,7 +964,7 @@ TextureImporter:
         width: 45
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -977,7 +977,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_36
+      name: z23
       rect:
         serializedVersion: 2
         x: 103
@@ -985,7 +985,7 @@ TextureImporter:
         width: 45
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -998,15 +998,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_37
+      name: z24
       rect:
         serializedVersion: 2
-        x: 204
+        x: 205
         y: 1
         width: 43
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1019,7 +1019,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_38
+      name: z25
       rect:
         serializedVersion: 2
         x: 256
@@ -1027,7 +1027,7 @@ TextureImporter:
         width: 40
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1040,15 +1040,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_39
+      name: z26
       rect:
         serializedVersion: 2
         x: 307
-        y: 3
+        y: 4
         width: 38
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1061,7 +1061,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_40
+      name: z27
       rect:
         serializedVersion: 2
         x: 360
@@ -1069,7 +1069,7 @@ TextureImporter:
         width: 35
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1082,7 +1082,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: japanese-chess_41
+      name: KakuNari
       rect:
         serializedVersion: 2
         x: 103
@@ -1090,7 +1090,7 @@ TextureImporter:
         width: 45
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

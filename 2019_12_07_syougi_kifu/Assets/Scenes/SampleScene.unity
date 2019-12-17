@@ -1545,6 +1545,20 @@ MonoBehaviour:
   - {fileID: 1786866549}
   - {fileID: 802422401}
   textAsset: {fileID: 4900000, guid: 7607941169248154aafd74e3518d9acf, type: 3}
+  pieceSpriteRenderer: []
+  pieceSpriteDate:
+  - {fileID: -203334637798997637, guid: 1774ab9cc92414d40b4a49a468df2b45, type: 3}
+  - {fileID: -9177626294841792278, guid: 1774ab9cc92414d40b4a49a468df2b45, type: 3}
+  - {fileID: 3699783803576805646, guid: 1774ab9cc92414d40b4a49a468df2b45, type: 3}
+  - {fileID: 2901025813841699647, guid: 1774ab9cc92414d40b4a49a468df2b45, type: 3}
+  - {fileID: 2506499849139907545, guid: 1774ab9cc92414d40b4a49a468df2b45, type: 3}
+  - {fileID: 5773305617064130220, guid: 1774ab9cc92414d40b4a49a468df2b45, type: 3}
+  - {fileID: -8949781339023283628, guid: 1774ab9cc92414d40b4a49a468df2b45, type: 3}
+  - {fileID: 2341499140660863920, guid: 1774ab9cc92414d40b4a49a468df2b45, type: 3}
+  - {fileID: 6158610561778286617, guid: 1774ab9cc92414d40b4a49a468df2b45, type: 3}
+  - {fileID: -8077574166386186609, guid: 1774ab9cc92414d40b4a49a468df2b45, type: 3}
+  - {fileID: -5068145149453504040, guid: 1774ab9cc92414d40b4a49a468df2b45, type: 3}
+  - {fileID: -3767628133100257643, guid: 1774ab9cc92414d40b4a49a468df2b45, type: 3}
   splitStete: 
   kifuNumber: 0
 --- !u!1 &773326812
