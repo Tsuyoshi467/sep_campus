@@ -1,26 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class KifuManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject []pieceDate;//駒オブジェクト取得
+    GameObject []pieceDate = default;//駒オブジェクト取得
 
     [SerializeField]
-    TextAsset textAsset;  //読み込むテキスト
+    TextAsset textAsset = default;  //読み込むテキスト
     
     [SerializeField]
-    SpriteRenderer []pieceSpriteRenderer;
+    SpriteRenderer []pieceSpriteRenderer = default;//オブジェクトの絵柄取得用
 
     [SerializeField]
-    Sprite [] pieceSpriteDate;
+    Sprite [] pieceSpriteDate = default;//使う絵柄
+
+    [SerializeField]
+    Text []kifuText = default;//棋譜を表示するテキスト
+
+    [SerializeField]
+    GameObject basePiece = default;//board[0,0]の位置にある駒
 
     string loadText;      //読み込んだ文字を一つにする  
     string[] splitText;   //1行
     string[] splitDate;   //カンマ区切り
 
-
+    //駒の種類
     public enum Piece
     {
         //通常の駒(Player1) 
@@ -63,22 +71,32 @@ public class KifuManager : MonoBehaviour
 
     };
 
+    //駒の絵柄
     enum PieceSprite
     {
-        Gin,
-        Hisya,
-        Kaku,
-        Keima,
-        Kyousya,
-        Fu,
-        GinNari,
-        HisyaNari,
-        KakuNari,
-        KeimaNari,
-        KyousyaNari,
-        FuNari,
+        Gin,        //銀
+        Hisya,      //飛車
+        Kaku,       //角
+        Keima,      //桂馬
+        Kyousya,    //香車
+        Fu,         //歩
+        GinNari,    //成った銀
+        HisyaNari,  //成った飛車
+        KakuNari,   //成った角
+        KeimaNari,  //成った桂馬
+        KyousyaNari,//成った香車
+        FuNari,     //成った歩
 
         PieceSpriteLength,
+    }
+
+    //棋譜のテキストの種類
+    enum TextState
+    {
+        Turn, //先手化後手か
+        X,    //動かした駒のX座標
+        Y,    //動かした駒のY座標
+        Piece,//動かした駒
     }
 
     //棋譜構造体
@@ -97,14 +115,14 @@ public class KifuManager : MonoBehaviour
 
     Vector3 pos;                //駒座標取得用 
     int [,]board;               //盤面の二次元配列
-    public int[] splitStete;   //読み込んだデータをひとつひとつ
-    const int boardY_start = -4;//boardとUnity上の座標Yの差
-    const int boardX_start = -4;//boardとUnity上の座標Xの差
+    public int[] splitStete;    //読み込んだデータをひとつひとつ
+    int boardY_start = 0;       //boardとUnity上の座標Yの差
+    int boardX_start = 0;       //boardとUnity上の座標Xの差
     const int height = 9;　　　 //高さ最大値
     const int width = 9;        //幅最大値
     const int notPiece = 99;    //駒がないとき用
     const int piece_kara = 28;  //読み込んだ駒が空
-    const int moveTime = 30;    //移動間隔
+    const int moveTime = 80;    //移動間隔
     public int kifuNumber = 0;　//行数
     private int dateNumber = 0; //総文字数
     private int splitCounter = 0;//文字カウンター
@@ -146,8 +164,11 @@ public class KifuManager : MonoBehaviour
             }
         }
 
+        boardX_start = 0 - (int)basePiece.transform.position.x;  //boardのx0とUnity上の座標xの差を出す
+        boardY_start = 0 - (int)basePiece.transform.position.y;  //boardのy0とUnity上の座標yの差を出す
+
         //board初期化
-        for(int i = 0; i < height; i++)
+        for (int i = 0; i < height; i++)
         {
             for(int j = 0;j < width; j++)
             {
@@ -175,7 +196,8 @@ public class KifuManager : MonoBehaviour
             if (drawTimer % moveTime == 0)
             {
                 Draw();　　　　//表示
-                kifuCounter++;//棋譜カウント更新
+                KifuText();    //棋譜のテキスト更新
+                kifuCounter++; //棋譜カウント更新
             }
             ++drawTimer;//表示タイマー更新
         }
@@ -187,6 +209,7 @@ public class KifuManager : MonoBehaviour
         //駒がとられたとき非表示にする
         if(board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX] != notPiece)
         {
+            //動かした駒のタグで分岐
             switch (pieceDate[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].tag)
             {
                 case "Gin":
@@ -212,8 +235,10 @@ public class KifuManager : MonoBehaviour
             }
             pieceDate[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].SetActive(false);//駒を非表示にする
         }
+        //持ち駒を使ったとき
         if (kifu[kifuCounter].nowY == notPiece || kifu[kifuCounter].nowX == notPiece)
         {
+            //動かした駒の種類で分岐
             switch (kifu[kifuCounter].piece)
             {
                 case (int)Piece.金:
@@ -251,8 +276,10 @@ public class KifuManager : MonoBehaviour
             }
 
         }
+        //盤の駒を動かした時
         else if (kifu[kifuCounter].nowY != notPiece && kifu[kifuCounter].nowX != notPiece)
         {
+            //動かした駒が成っていたら絵柄を変更
             switch (kifu[kifuCounter].piece)
             {
                 case (int)Piece.銀成:
@@ -291,7 +318,10 @@ public class KifuManager : MonoBehaviour
             pos.x = (kifu[kifuCounter].nextX - kifu[kifuCounter].nowX) * -1;
             pos.z = 0;
             //入れられた差をオブジェクトに反映
-            pieceDate[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].transform.position += pos;
+            pos.y =  pieceDate[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].transform.position.y + pos.y;
+            pos.x =  pieceDate[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].transform.position.x + pos.x;
+            pos.z =  pieceDate[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].transform.position.z + pos.z;
+            pieceDate[board[kifu[kifuCounter].nextY, kifu[kifuCounter].nextX]].transform.DOMove(pos,1f);
         }
 
     }
@@ -319,6 +349,152 @@ public class KifuManager : MonoBehaviour
                 pieceDate[i].SetActive(true);                         //駒を表示
                 break;
             }
+        }
+    }
+
+    //棋譜のテキスト更新
+    //引数:無し
+    void KifuText()
+    {
+        //棋譜の番号で先手後手を判断
+        if(kifuCounter % 2 == 0)
+        {
+            kifuText[(int)TextState.Turn].text = "先手";
+        }
+        else
+        {
+            kifuText[(int)TextState.Turn].text = "後手";
+        }
+        //棋譜のnextXで分岐し数字に変換しテキストを更新
+        switch (kifu[kifuCounter].nextX)
+        {
+            case 0:
+                kifuText[(int)TextState.X].text = "1";
+                break;
+            case 1:
+                kifuText[(int)TextState.X].text = "2";
+                break;
+            case 2:
+                kifuText[(int)TextState.X].text = "3";
+                break;
+            case 3:
+                kifuText[(int)TextState.X].text = "4";
+                break;
+            case 4:
+                kifuText[(int)TextState.X].text = "5";
+                break;
+            case 5:
+                kifuText[(int)TextState.X].text = "6";
+                break;
+            case 6:
+                kifuText[(int)TextState.X].text = "7";
+                break;
+            case 7:
+                kifuText[(int)TextState.X].text = "8";
+                break;
+            case 8:
+                kifuText[(int)TextState.X].text = "9";
+                break;
+            default:
+                kifuText[(int)TextState.X].text = "0";
+                break;
+        }
+        //棋譜のnextYで分岐し漢字に変換しテキストを更新
+        switch (kifu[kifuCounter].nextY)
+        {
+            case 0:
+                kifuText[(int)TextState.Y].text = "一";
+                break;
+            case 1:
+                kifuText[(int)TextState.Y].text = "二";
+                break;
+            case 2:
+                kifuText[(int)TextState.Y].text = "三";
+                break;
+            case 3:
+                kifuText[(int)TextState.Y].text = "四";
+                break;
+            case 4:
+                kifuText[(int)TextState.Y].text = "五";
+                break;
+            case 5:
+                kifuText[(int)TextState.Y].text = "六";
+                break;
+            case 6:
+                kifuText[(int)TextState.Y].text = "七";
+                break;
+            case 7:
+                kifuText[(int)TextState.Y].text = "八";
+                break;
+            case 8:
+                kifuText[(int)TextState.Y].text = "九";
+                break;
+            default:
+                kifuText[(int)TextState.Y].text = "零";
+                break;
+        }
+        //棋譜のpieceで分岐し対応する駒に変換しテキストを更新
+        switch (kifu[kifuCounter].piece)
+        {
+            case (int)Piece.王:
+            case (int)Piece.王2:
+                kifuText[(int)TextState.Piece].text = "王";
+                break;
+            case (int)Piece.金:
+            case (int)Piece.金2:
+                kifuText[(int)TextState.Piece].text = "金";
+                break;
+            case (int)Piece.銀:
+            case (int)Piece.銀2:
+                kifuText[(int)TextState.Piece].text = "銀";
+                break;
+            case (int)Piece.飛:
+            case (int)Piece.飛2:
+                kifuText[(int)TextState.Piece].text = "飛";
+                break;
+            case (int)Piece.角:
+            case (int)Piece.角2:
+                kifuText[(int)TextState.Piece].text = "角";
+                break;
+            case (int)Piece.桂:
+            case (int)Piece.桂2:
+                kifuText[(int)TextState.Piece].text = "桂";
+                break;
+            case (int)Piece.香:
+            case (int)Piece.香2:
+                kifuText[(int)TextState.Piece].text = "香";
+                break;
+            case (int)Piece.歩:
+            case (int)Piece.歩2:
+                kifuText[(int)TextState.Piece].text = "歩";
+                break;
+            case (int)Piece.銀成:
+            case (int)Piece.銀成2:
+                kifuText[(int)TextState.Piece].text = "銀成";
+                break;
+            case (int)Piece.飛成:
+            case (int)Piece.飛成2:
+                kifuText[(int)TextState.Piece].text = "飛成";
+                break;
+            case (int)Piece.角成:
+            case (int)Piece.角成2:
+                kifuText[(int)TextState.Piece].text = "角成";
+                break;
+            case (int)Piece.桂成:
+            case (int)Piece.桂成2:
+                kifuText[(int)TextState.Piece].text = "桂成";
+                break;
+            case (int)Piece.香成:
+            case (int)Piece.香成2:
+                kifuText[(int)TextState.Piece].text = "香成";
+                break;
+            case (int)Piece.歩成:
+            case (int)Piece.歩成2:
+                kifuText[(int)TextState.Piece].text = "歩成";
+                break;
+            default:
+                kifuText[(int)TextState.Piece].text = "空";
+                break;
         }
     }
 }
