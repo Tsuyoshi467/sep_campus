@@ -13,6 +13,12 @@ public class BattleManager : MonoBehaviour
     Text judgText = default;//表示するテキスト
 
     [SerializeField]
+    Text enemyHandText = default;
+
+    [SerializeField]
+    Text playerHandText = default;
+
+    [SerializeField]
     private Sprite []handSprite = default;//表示するエネミーの手の画像
 
     [SerializeField]
@@ -44,8 +50,7 @@ public class BattleManager : MonoBehaviour
         Battle,//じゃんけんをする
         Final, //結果
     }
-
-    bool victoryJudg = false;//勝ったかどうか
+    
     int nowScene = (int)Scene.Fast;
     float elapsedTime = 0f;//経過時間
     const float drwaTime = 1.0f;//表示するまでの時間
@@ -80,7 +85,11 @@ public class BattleManager : MonoBehaviour
                 SceneDraw();
                 SpriteRenderer enemySprite = enemyHandObj.GetComponent<SpriteRenderer>();//エネミーの画像を取得
                 SpriteRenderer playerSprite = plaerHandObj.GetComponent<SpriteRenderer>();//エネミーの画像を取得
-                
+
+                enemyHandText.text = "\"computer:\""+ acquiredData.computer;
+                playerHandText.text = "\"player:\""+ myHand;
+
+                retryButton.SetActive(true);
                 enemySprite.sprite = handSprite[acquiredData.computer];
 
                 switch (myHand)
@@ -152,6 +161,8 @@ public class BattleManager : MonoBehaviour
         else
         {
             acquiredData = JsonUtility.FromJson<AcquiredData>(request.downloadHandler.text);//エネミークラスにキャスト
+    
+            Debug.Log(request.downloadHandler.text);
             nowScene = (int)Scene.Final;
         }
     }
