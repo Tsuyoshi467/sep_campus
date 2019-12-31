@@ -13,19 +13,23 @@ public class BattleManager : MonoBehaviour
     Text judgText = default;//表示するテキスト
 
     [SerializeField]
-    private Sprite []enemySprite = default;//表示するエネミーの手の画像
+    private Sprite []handSprite = default;//表示するエネミーの手の画像
 
+    [SerializeField]
+    private GameObject plaerHandObj = default;//プレイヤーの手のオブジェクト
     [SerializeField]
     private GameObject enemyHandObj = default;//エネミーの手のオブジェクト
 
+    [SerializeField]
+    GameObject retryButton = default;
 
-    public class EnemyHand
+    public class AcquiredData
     {
         public int computer;//読み取るエネミーの手
         public string message;
     }
 
-    public EnemyHand enemyHand = default;//エネミークラス
+    public AcquiredData acquiredData = default;//エネミークラス
 
     enum Hand
     {
@@ -39,7 +43,6 @@ public class BattleManager : MonoBehaviour
         Fast,  //じゃんけんの文字表示
         Battle,//じゃんけんをする
         Final, //結果
-        Aiko,  //あいこ
     }
 
     bool victoryJudg = false;//勝ったかどうか
@@ -75,24 +78,46 @@ public class BattleManager : MonoBehaviour
                 break;
             case (int)Scene.Final:
                 SceneDraw();
-                //勝敗に応じてテキストを変更
-                if (victoryJudg == true)
+                SpriteRenderer enemySprite = enemyHandObj.GetComponent<SpriteRenderer>();//エネミーの画像を取得
+                SpriteRenderer playerSprite = plaerHandObj.GetComponent<SpriteRenderer>();//エネミーの画像を取得
+                
+                enemySprite.sprite = handSprite[acquiredData.computer];
+
+                switch (myHand)
                 {
-                    judgText.text = "player Win";
+                    case "0":
+                        playerSprite.sprite = handSprite[(int)Hand.goo];
+                        break;
+                    case "1":
+                        playerSprite.sprite = handSprite[(int)Hand.choki];
+                        break;
+                    case "2":
+                        playerSprite.sprite = handSprite[(int)Hand.par];
+                        break;
                 }
-                else
+
+                switch (acquiredData.message)
                 {
-                    judgText.text = "player Lose";
-                }
-                break;
-            case (int)Scene.Aiko:
-                SceneDraw();
-                elapsedTime -= Time.deltaTime;//時間を減らす
-                //指定した時間以下の時処理
-                if (elapsedTime <= 0.0f)
-                {
-                    elapsedTime = drwaTime;//表示する時間をセット
-                    nowScene = (int)Scene.Battle;//シーン番号切り替え
+                    case "win":
+                        judgText.text = "player Win";
+                        break;
+                    case "loss":
+                        judgText.text = "player Lose";
+                        break;
+                    case "draw":
+                        retryButton.SetActive(false);
+                        judgText.text = "あいこで!";
+                        elapsedTime -= Time.deltaTime;//時間を減らす
+                                                      //指定した時間以下の時処理
+                        if (elapsedTime <= 0.0f)
+                        {
+                            elapsedTime = drwaTime;//表示する時間をセット
+                            nowScene = (int)Scene.Battle;//シーン番号切り替え
+                        }
+                        break;
+                    default:
+                        Debug.Log("HandError");
+                        break;
                 }
                 break;
             default:
@@ -103,8 +128,8 @@ public class BattleManager : MonoBehaviour
 
     private IEnumerator GetEnemyHand(string url, string JsonString)
     {
-
-        var postRequest = new UnityWebRequest(url, "POST");
+        var postRequest = UnityWebRequest.Get(string.Format("{0}?you={1}", url, JsonString));
+        
         //json(string)をbyte[]に変換
         byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(JsonString);
 
@@ -116,7 +141,7 @@ public class BattleManager : MonoBehaviour
         postRequest.SetRequestHeader("Content-Type", "application/json");
         yield return postRequest.SendWebRequest();
 
-        UnityWebRequest  request = UnityWebRequest.Get(url);//URLの内容を取得
+        UnityWebRequest  request = UnityWebRequest.Get(postRequest.url);//URLの内容を取得
         yield return request.SendWebRequest();
 
         //エラー判定
@@ -126,10 +151,8 @@ public class BattleManager : MonoBehaviour
         }
         else
         {
-            enemyHand = JsonUtility.FromJson<EnemyHand>(request.downloadHandler.text);//エネミークラスにキャスト
-
-            SpriteRenderer sprite = enemyHandObj.GetComponent<SpriteRenderer>();//エネミーの画像を取得
-            handCheck();
+            acquiredData = JsonUtility.FromJson<AcquiredData>(request.downloadHandler.text);//エネミークラスにキャスト
+            nowScene = (int)Scene.Final;
         }
     }
 
@@ -157,27 +180,6 @@ public class BattleManager : MonoBehaviour
         StartCoroutine(GetEnemyHand("http://ec2-18-176-58-134.ap-northeast-1.compute.amazonaws.com/janken.php", myHand));
     }
 
-    void handCheck()
-    {
-        switch (enemyHand.message)
-        {
-            case "win":
-                victoryJudg = true;//勝利判定
-                nowScene = (int)Scene.Final;
-                break;
-            case "loss":
-                victoryJudg = false;//敗北判定
-                nowScene = (int)Scene.Final;
-                break;
-            case "draw":
-                nowScene = (int)Scene.Aiko;//引き分け判定
-                break;
-            default:
-                Debug.Log("HandError");
-                break;
-        }
-    }
-    
     public void ReturnButton()
     {
         nowScene = (int)Scene.Fast;
